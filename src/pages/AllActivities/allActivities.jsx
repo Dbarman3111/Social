@@ -14,7 +14,7 @@ function Allactivities() {
 
   const fetchDataOnLoad = async () => {
     await axios
-      .get(`http://localhost:4000/api/post/getAllPostForUser/${id}`)
+      .get(`https://meetinsocial.onrender.com/api/post/getAllPostForUser/${id}`)
       .then((res) => {
         console.log(res);
         setPosts(res.data.posts);
