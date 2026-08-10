@@ -30,8 +30,8 @@ function Feeds() {
   const fetchSelfData = async ()=>{
     try {
         const [userData, postData] = await Promise.all([
-       await axios.get('https://meetinsocial.onrender.com/api/auth/self', {withCredentials: true}),
-        await axios.get('https://meetinsocial.onrender.com/api/post/getAllPost')
+       await axios.get('https://socialm-backend.onrender.com/api/auth/self', {withCredentials: true}),
+        await axios.get('https://socialm-backend.onrender.com/api/post/getAllPost')
     ]);
      
     setPersonalData(userData.data.user)
