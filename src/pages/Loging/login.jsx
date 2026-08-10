@@ -1,4 +1,4 @@
-import { GoogleLogin } from '@react-oauth/google'
+// import { GoogleLogin } from '@react-oauth/google'
 import React, { useState } from 'react'
 import { Link , useNavigate} from 'react-router-dom'
 import GoogleLoginComp from '../../components/GoogleLogin/googleLoginComp'
