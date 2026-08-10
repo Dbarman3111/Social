@@ -57,7 +57,7 @@ function Messages() {
 
   const fetchMessages = async () => {
     await axios
-      .get(`http://localhost:4000/api/message/${activeConvId}`, {
+      .get(`https://socialm-backend.onrender.com/api/message/${activeConvId}`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -72,7 +72,7 @@ function Messages() {
 
   const fetchConversationOnLoad = async () => {
     await axios
-      .get("http://localhost:4000/api/conversation/getConversation", {
+      .get("https://socialm-backend.onrender.com/api/conversation/getConversation", {
         withCredentials: true,
       })
       .then((res) => {
@@ -124,7 +124,7 @@ function Messages() {
 }
 
 const handleSendMessage = async ()=>{
-    await axios.post(`http://localhost:4000/api/message`, {conversation: activeConvId, message: messageText, picture: imageLink }, {withCredentials:true}).then(res=>{
+    await axios.post(`https://socialm-backend.onrender.com/api/message`, {conversation: activeConvId, message: messageText, picture: imageLink }, {withCredentials:true}).then(res=>{
       
         socket.emit("sendMessage", activeConvId, res.data)
          setMessageText("");
