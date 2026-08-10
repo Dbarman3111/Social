@@ -182,7 +182,7 @@ const handleEditFunc = async(data)=>{
         toast.success(res.data.message);
       } else if (status === "Connect") {
         const res = await axios.post(
-          'http://localhost:4000/api/auth/sendFriendReq',
+          'https://socialm-backend.onrender.com/api/auth/sendFriendReq',
           { receiver: userData?._id },
           { withCredentials: true }
         );
